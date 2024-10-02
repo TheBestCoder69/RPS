@@ -3,19 +3,24 @@ import random
 # Declares the computer
 computer = random.randint(1, 3)
 
+# Gets user input for rock, paper, or scissors.
+user = int(input("Give me Rock, Scissors, or Paper. (Where rock = 1, scissors = 2, and paper = 3.)"))
+
 # Sets up the Variables
 rock = 1
 si = 2
 paper = 3
 
 # Method for the computer to choose rock, paper, or si
-def computer():
-  match computer:
+def determineChoice(choice):
+  match choice:
     case 1: 
       print rock
     case 2:
       print si
     case 3:
       print paper
-        
-      
+
+#Prints the computer's and the user's choice.
+determineChoice(computer)
+determineChoice(user)
