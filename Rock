@@ -12,7 +12,7 @@ si = 2
 paper = 3
 
 # Method for the computer to choose rock, paper, or si
-def computer():
+def determineChoice():
   match computer:
     case 1: 
       print rock
@@ -20,5 +20,7 @@ def computer():
       print si
     case 3:
       print paper
-        
 
+#Prints the computer's and the user's choice.
+determineChoice(computer)
+determineChoice(user)
