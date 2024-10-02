@@ -12,8 +12,8 @@ si = 2
 paper = 3
 
 # Method for the computer to choose rock, paper, or si
-def determineChoice():
-  match computer:
+def determineChoice(choice):
+  match choice:
     case 1: 
       print rock
     case 2:
