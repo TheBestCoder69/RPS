@@ -37,7 +37,3 @@ else:
   print("Computer Wins!")
   computerWin = true
 
-
-#Prints the computer's and the user's choice.
-print("The computer chose: " + determineChoice(computer))
-print("You chose: " + determineChoice(user))
