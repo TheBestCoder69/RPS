@@ -1,33 +1,49 @@
 import random
 
-# Declares the computer
-computer = random.randint(1, 3)
-
-# Gets user input for rock, paper, or scissors.
-user = int(input("Give me Rock, Scissors, or Paper. (Where rock = 1, scissors = 2, and paper = 3.)"))
-
 # Sets up the Variables
 rock = 1
 scissors = 2
 paper = 3
+userWin = 0
+computerWin = 0
+tie = 0
 
 # Method for the computer to choose rock, paper, or si
 def determineChoice(choice):
   match choice:
     case 1: 
-      print rock
+      return("rock")
     case 2:
-      print scissors
+      return("scissors")
     case 3:
-      print paper
+      return("paper")
 
-if computer == user:
-  print("TIE!")
-elif computer == 1 and user == 2:
-  print("Computer wins with rock!")
-elif user == 2 and computer == 1:
-  print("User wins with rock")
+while userWin < 10 and computerWin < 10 and tie < 10:
 
-#Prints the computer's and the user's choice.
-determineChoice(computer)
-determineChoice(user)
+  # Declares the computer
+  computer = random.randint(1, 3)
+
+  # Gets user input for rock, paper, or scissors.
+  user = int(input("Give me Rock, Scissors, or Paper. (Where rock = 1, scissors = 2, and paper = 3.)"))
+
+  if user == computer:
+    print("TIE!")
+    tie += 1
+
+  if (user == scissors and computer == paper) or (user == rock and computer == scissors) or (user == paper and computer == rock):
+    print("You Win")
+    userWin += 1
+  else:
+    print("Computer Wins!")
+    computerWin += 1
+
+  #Prints the computer's and the user's choice.
+  print("The computer chose: " + determineChoice(computer))
+  print("You chose: " + determineChoice(user))
+
+if userWin > 10:
+  print("You won the whole game!")
+elif computerWin > 10:
+  print("The computer won the whole game!")
+else:
+  print("The whole game was tied!")
