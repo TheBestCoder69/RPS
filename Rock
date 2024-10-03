@@ -23,6 +23,10 @@ def determineChoice(choice):
 
 if computer == user:
   print("TIE!")
+elif computer == 1 and user == 2:
+  print("Computer wins with rock!")
+elif user == 2 and computer == 1:
+  print("User wins with rock")
 
 #Prints the computer's and the user's choice.
 determineChoice(computer)
