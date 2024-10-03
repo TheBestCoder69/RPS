@@ -24,7 +24,7 @@ def determineChoice(choice):
 if user == computer:
   print("TIE!")
 
-if user == scissors and computer == paper:
+if (user == scissors and computer == paper) or (user == rock and computer == scissors) or (user == paper and computer == rock):
   print("You Win")
 else:
   print("Computer Wins!)
