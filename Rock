@@ -8,7 +8,7 @@ user = int(input("Give me Rock, Scissors, or Paper. (Where rock = 1, scissors = 
 
 # Sets up the Variables
 rock = 1
-si = 2
+scissors = 2
 paper = 3
 
 # Method for the computer to choose rock, paper, or si
@@ -17,9 +17,16 @@ def determineChoice(choice):
     case 1: 
       print rock
     case 2:
-      print si
+      print scissors
     case 3:
       print paper
+
+if computer == user:
+  print("TIE!")
+elif computer == 1 and user == 2:
+  print("Computer wins with rock!")
+elif user == 2 and computer == 1:
+  print("User wins with rock")
 
 #Prints the computer's and the user's choice.
 determineChoice(computer)
