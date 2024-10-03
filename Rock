@@ -21,8 +21,14 @@ def determineChoice(choice):
     case 3:
       print paper
 
-if computer == user:
+if user == computer:
   print("TIE!")
+
+if user == scissors and computer == paper:
+  print("You Win")
+else:
+  print("Computer Wins!)
+
 elif computer == 1 and user == 2:
   print("Computer wins with rock!")
 elif user == 2 and computer == 1:
