@@ -15,11 +15,11 @@ paper = 3
 def determineChoice(choice):
   match choice:
     case 1: 
-      print rock
+      return("rock")
     case 2:
-      print scissors
+      return("scissors")
     case 3:
-      print paper
+      return("paper")
 
 if user == computer:
   print("TIE!")
@@ -27,13 +27,9 @@ if user == computer:
 if (user == scissors and computer == paper) or (user == rock and computer == scissors) or (user == paper and computer == rock):
   print("You Win")
 else:
-  print("Computer Wins!)
+  print("Computer Wins!")
 
-elif computer == 1 and user == 2:
-  print("Computer wins with rock!")
-elif user == 2 and computer == 1:
-  print("User wins with rock")
 
 #Prints the computer's and the user's choice.
-determineChoice(computer)
-determineChoice(user)
+print("The computer chose: " + determineChoice(computer))
+print("You chose: " + determineChoice(user))
